@@ -1,5 +1,6 @@
 package dao;
 
+import model.Class;
 import model.Student;
 
 import java.sql.SQLException;
@@ -11,4 +12,6 @@ public interface IStudentDAO {
     public List<Student> selectAllStudents();
     public  boolean deleteStudent(int id) throws SQLException;
     public boolean updateStudent(Student student) throws SQLException;
+    public  List<Class> selectAllClass();
+    public List<Student> searchByName(String inputName);
 }
